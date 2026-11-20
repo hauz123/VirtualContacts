@@ -6,7 +6,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - run: unzip -o VirtualContacts-Theos.zip
-      - run: HOMEBREW_NO_AUTO_UPDATE=1 brew install ldid xz
+      - run: HOMEBREW_NO_AUTO_UPDATE=1 brew install ldid dpkg
       - run: git clone --recursive https://github.com/theos/theos.git ~/theos
       - run: |
           git clone --depth=1 https://github.com/theos/sdks.git /tmp/sdks
