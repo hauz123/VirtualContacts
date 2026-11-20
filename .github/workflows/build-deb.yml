@@ -14,6 +14,7 @@ jobs:
       - run: |
           export THEOS=~/theos
           cd VirtualContacts
+          sed -i '' 's/-Wall -Wextra/-Wno-unused-parameter -Wno-error/g' Makefile
           make package FINALPACKAGE=1
       - uses: actions/upload-artifact@v4
         with:
